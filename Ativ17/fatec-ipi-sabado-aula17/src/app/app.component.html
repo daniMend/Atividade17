@@ -1,0 +1,12 @@
+<div class="container"> 
+  <form>
+    <div class="row">
+      <label for="Pesquisa">Cidade</label>      
+      <input type="text" class="form-control" id="cidadeInput" #cidadeInput>       
+      <button class="btn btn-primary btn-block" (click)="pesquisar(cidadeInput.value)">Pesquisar</button> 
+    </div>  
+  </form>
+    <div class="row">    
+      <app-previsao class="col-lg-4 mb-2" *ngFor="let previsao of previsoes" [previsao]="previsao"></app-previsao>  
+    </div> 
+</div>
